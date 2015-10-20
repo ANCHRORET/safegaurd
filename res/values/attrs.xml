@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 在哪里用到了 -->
+    <declare-styleable name="SettingItemView">
+
+        <!-- 需要改变三个属性 -->
+        <!-- 1.主题文字 string要小写 -->
+        <attr name="sivTitle" format="string|reference" />
+        <!-- 2.背景 -->
+        <attr name="sivBackground">
+            <enum name="start" value="0" />
+            <enum name="middle" value="1" />
+            <enum name="end" value="2" />
+        </attr>
+        <!-- 3.开关的显示,用boolean型 -->
+        <attr name="sivToggle" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="LockPatternView">
+
+        <!--
+             Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height"
+        -->
+        <attr name="aspect" format="string" />
+    </declare-styleable>
+
+</resources>

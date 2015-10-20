@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tp.safeguard"
+    android:versionCode="1"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.tp.safeguard" >
+    </instrumentation>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library
+            android:name="android.test.runner"
+            android:required="true" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" 
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.HomeActivity" >
+        </activity>
+        <activity android:name=".activities.SettingActivity" >
+        </activity>
+        <activity android:name=".activities.SjfdSetup1Activity" >
+        </activity>
+        <activity android:name=".activities.SjfdSetup2Activity" >
+        </activity>
+        <activity android:name=".activities.SjfdSetup3Activity" >
+        </activity>
+        <activity android:name=".activities.SjfdSetup4Activity" >
+        </activity>
+        <activity android:name=".activities.SjfdSetup5Activity" >
+        </activity>
+        <activity android:name=".activities.SelectContactActivity2" >
+        </activity>
+        <activity android:name=".activities.SelectContactActivity" >
+        </activity>
+        <activity android:name=".activities.SrljActivity" >
+        </activity>
+        <activity android:name=".activities.CygjActivity" >
+        </activity>
+        <activity android:name=".activities.RjgjActivity" >
+        </activity>
+        <activity android:name=".activities.JcglActivity" >
+        </activity>
+        <activity android:name=".activities.BlackActivity" >
+        </activity>
+        <activity android:name=".activities.ApplockEntranceActivity" >
+        </activity>
+        <activity android:name=".activities.QueryAddressActivity" >
+        </activity>
+        <activity android:name=".activities.QueryCommonNumActivity" >
+        </activity>
+        <activity android:name=".activities.AppLock" >
+        </activity>
+        <activity
+            android:name=".activities.SjfdSetupInfoActivity"
+            android:launchMode="singleTask" >
+        </activity>
+
+        <!-- reveiver -->
+        <receiver android:name=".receivers.BootCompletedReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.SmsReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receivers.SafeAdminReceiver"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- service -->
+        <service android:name=".services.PlayAlarmService" />
+        <service android:name=".services.DisplayNumAddress" />
+        <service android:name=".services.GPSService" />
+        <service android:name=".services.CallSmsSafeService" />
+        <service android:name=".services.LockScreenCleanProcess" />
+    </application>
+
+</manifest>

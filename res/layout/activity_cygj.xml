@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tp="http://schemas.android.com/apk/res/com.tp.safeguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TextTitleStyle"
+        android:layout_width="match_parent"
+        android:text="常用工具" />
+
+    <!-- 自定义的属性,不能写入style -->
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/cygj_siv_queryAddress"
+        style="@style/SivPrimaryStyle"
+        android:layout_marginTop="15dp"
+        tp:sivBackground="start"
+        tp:sivTitle="号码归属地查询"
+        tp:sivToggle="false" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/cygj_siv_queryCommonNum"
+        style="@style/SivPrimaryStyle"
+        tp:sivBackground="end"
+        tp:sivTitle="常用号码查询"
+        tp:sivToggle="false" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/cygj_siv_smsBackup"
+        style="@style/SivPrimaryStyle"
+        android:layout_marginTop="8dp"
+        tp:sivBackground="start"
+        tp:sivTitle="短信备份"
+        tp:sivToggle="false" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/cygj_siv_smsRestore"
+        style="@style/SivPrimaryStyle"
+        tp:sivBackground="end"
+        tp:sivTitle="短信还原"
+        tp:sivToggle="false" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/cygj_siv_appLock"
+        style="@style/SivPrimaryStyle"
+        android:layout_marginTop="8dp"
+        tp:sivBackground="start"
+        tp:sivTitle="程序锁管理"
+        tp:sivToggle="false" />
+
+    <com.tp.safeguard.view.SettingItemView
+        style="@style/SivPrimaryStyle"
+        tp:sivBackground="middle"
+        tp:sivTitle="开启电子狗服务一"
+        tp:sivToggle="true" />
+
+    <com.tp.safeguard.view.SettingItemView
+        style="@style/SivPrimaryStyle"
+        tp:sivBackground="end"
+        tp:sivTitle="开启电子狗服务二"
+        tp:sivToggle="true" />
+
+</LinearLayout>

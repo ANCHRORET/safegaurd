@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/SetupTitleBar"
+        android:gravity="center"
+        android:text="手机防盗" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/TvSetupStyle"
+            android:text="安全号码" />
+
+        <TextView
+            android:id="@+id/setupInfo_tv_safeNum"
+            style="@style/TvSetupStyle"
+            android:layout_alignParentRight="true"
+            android:text="5555" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#A19FA1" />
+
+    <!-- 设置gravity之后,图片的放置位置会出问题 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_item_selector"
+        android:onClick="toggleSjfd" >
+
+        <TextView
+            style="@style/TvSetupStyle"
+            android:layout_centerVertical="true"
+            android:text="防盗保护是否开启" />
+
+        <ImageView
+            android:id="@+id/setupInfo_iv_toggle"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="3dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/lock" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#A19FA1" />
+
+    <RelativeLayout
+        android:onClick="enterSetup"
+        android:background="@drawable/btn_item_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/TvSetupStyle"
+            android:text="重新进入设置向导页面" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A19FA1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="功能介绍"
+        android:textColor="#ffffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        style="@style/SetupItemBar"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="10dp"
+        android:text="GPS追踪:#*location*#" />
+
+    <TextView
+        style="@style/SetupItemBar"
+        android:layout_marginBottom="3dp"
+        android:text="远程销毁数据:#*wipedata*#" />
+
+    <TextView
+        style="@style/SetupItemBar"
+        android:layout_marginBottom="3dp"
+        android:text="播放报警音乐:#*alarm*#" />
+
+    <TextView
+        style="@style/SetupItemBar"
+        android:layout_marginBottom="3dp"
+        android:text="远程锁屏:#*lockscreen*#" />
+
+</LinearLayout>

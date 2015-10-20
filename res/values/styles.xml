@@ -1,0 +1,142 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 弹出对话框的样式 ,添加文字内容即可 -->
+    <style name="dialogTitleBar">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:drawableLeft">@drawable/dialog_title_default_icon</item>
+        <item name="android:background">@drawable/dialog_title_background</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 确认按钮的基本样式 -->
+
+    <style name="BtnPrimaryStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_yes_selector</item>
+        <item name="android:textColor">@color/btn_yesinfo_selector</item>
+    </style>
+
+    <!-- 弹出对话框确认按钮的样式的样式 -->
+    <style name="dialogYesBtn" parent="BtnPrimaryStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">确定</item>
+    </style>
+
+    <!-- 弹出对话框取消按钮的样式的样式 -->
+    <style name="dialogNoBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/btn_no_selector</item>
+        <item name="android:text">取消</item>
+    </style>
+
+    <!-- 设置向导页面的标题样式 -->
+    <style name="SetupTitleBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">#3999D6</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- 设置向导中item的标题样式 -->
+    <style name="SetupItemBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:drawableLeft">@drawable/dialog_title_default_icon</item>
+        <item name="android:textColor">#bb000000</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- 下一步 -->
+    <style name="NextBtnStyle" parent="BtnPrimaryStyle">
+        <item name="android:text">下一步</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:drawableRight">@drawable/next</item>
+        <item name="android:onClick">clickNext</item>
+        <item name="android:layout_marginLeft">4dp</item>
+    </style>
+
+    <!-- 上一步 -->
+    <style name="PreBtnStyle" parent="BtnPrimaryStyle">
+        <item name="android:onClick">clickPre</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:text">上一步</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:drawableLeft">@drawable/pre</item>
+    </style>
+
+    <!-- 文本框基本样式 -->
+
+    <style name="TvSetupStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">#bb000000</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextNormalStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#aa000000</item>
+    </style>
+
+    <style name="TextTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">#3999D6</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="SivPrimaryStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <!-- NumAddressDialog的样式 -->
+    <style name="NADialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 上面为false,弹窗单独占了一页 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
+    </style>
+    <!-- popup的弹出方式 -->
+    <style name="PopupAnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/input_method_enter</item>
+        <item name="android:windowExitAnimation">@anim/input_method_exit</item>
+    </style>
+    
+</resources>

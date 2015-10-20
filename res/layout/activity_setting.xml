@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tastepoem="http://schemas.android.com/apk/res/com.tp.safeguard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#399AD6"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="设置中心"
+        android:textColor="#ffffffff"
+        android:textSize="25sp" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/set_autoUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        tastepoem:sivBackground="start"
+        tastepoem:sivTitle="自动更新设置"
+        tastepoem:sivToggle="true" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/set_autoRefuse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:clickable="true"
+        tastepoem:sivBackground="end"
+        tastepoem:sivTitle="骚扰拦截设置"
+        tastepoem:sivToggle="true" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/set_displayAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        tastepoem:sivBackground="start"
+        tastepoem:sivTitle="归属地显示设置"
+        tastepoem:sivToggle="true" />
+
+    <com.tp.safeguard.view.SettingItemView
+        android:id="@+id/set_displayStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:clickable="true"
+        tastepoem:sivBackground="end"
+        tastepoem:sivTitle="归属地风格设置"
+        tastepoem:sivToggle="false" />
+
+</LinearLayout>

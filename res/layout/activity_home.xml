@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 上部分 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_bkg" >
+
+        <!-- 黑马的图像部分 -->
+
+        <ImageView
+            android:id="@+id/home_iv_heima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/heima" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/home_iv_heima"
+            android:orientation="vertical" >
+
+            <!-- 应用名部分 -->
+
+            <TextView
+                android:id="@+id/tv_appname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="安全卫士"
+                android:textSize="20sp" />
+
+            <!-- 跑马灯部分 -->
+
+            <com.tp.safeguard.view.MarqueeView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="安全卫士,时刻保护你的安全,详情请看:http://www.tp.com"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- 设置图标部分 -->
+        <!-- 为什么图片背景设置的不一样大,但是显示不出效果 -->
+
+        <ImageView
+            android:id="@+id/home_iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_bg"
+            android:scaleType="center"
+            android:src="@drawable/setting" />
+    </RelativeLayout>
+
+    <!-- 下部分 -->
+
+    <GridView
+        android:layout_marginTop="8dp"
+        android:id="@+id/home_gv_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="3dp"
+        android:numColumns="2"
+        android:verticalSpacing="3dp" >
+    </GridView>
+
+</LinearLayout>

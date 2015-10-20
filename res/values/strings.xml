@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">safeguard</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="sample_device_admin_description">开启手机防盗,妈妈再也不用担心你的手机丢了</string>
+    <string name="add_admin_extra_app_text">妈妈再也不用担心你的手机了</string>
+    <string name="sample_device_admin">手机防盗管理员</string>
+    <string name="lockscreen_access_pattern_cell_added">Cell added   </string>
+    <string name="lockscreen_access_pattern_start">Pattern started</string>
+    <string name="lockscreen_access_pattern_detected">Pattern completed</string>
+    <string name="lockscreen_access_pattern_cleared">Pattern cleared</string>
+
+    <string-array name="process_header">
+        <item>用户进程:</item>
+        <item>系统进程:</item>
+    </string-array>
+
+</resources>

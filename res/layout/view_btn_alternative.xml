@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#459FD7"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="8dp" >
+
+    <TextView
+        android:id="@+id/alter_tv_left_unlock"
+        android:layout_width="80dp"
+        android:layout_height="33dp"
+        android:background="@drawable/ab_bg_left_selector"
+        android:gravity="center"
+        android:text="未加锁"
+        android:textColor="@color/ab_text_selector" />
+
+    <TextView
+        android:id="@+id/alter_tv_right_lock"
+        android:layout_width="80dp"
+        android:layout_height="33dp"
+        android:background="@drawable/ab_bg_right_selector"
+        android:gravity="center"
+        android:text="已加锁"
+        android:textColor="@color/ab_text_selector" />
+
+</LinearLayout>

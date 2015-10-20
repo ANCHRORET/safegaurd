@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+   <TextView
+        style="@style/dialogTitleBar"
+        android:text="密码设置"
+        />
+
+    <EditText 
+        android:id="@+id/dialog_et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:password="true"
+        android:singleLine="true"
+        android:hint="请输入密码"
+        />
+    <EditText 
+        android:id="@+id/dialog_et_confirmpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:password="true"
+        android:singleLine="true"
+        android:hint="请确认密码"
+        />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal" >
+        
+       <Button
+            android:id="@+id/dialog_btn_yes"
+            style="@style/dialogYesBtn" />
+
+        <Button
+            android:id="@+id/dialog_btn_no"
+            style="@style/dialogNoBtn" />
+        
+    </LinearLayout>
+</LinearLayout>
